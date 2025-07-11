@@ -1,0 +1,135 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to bottom right,
+    #89cff0,
+    #1e90ff
+  ); /* Light sky blue to deep blue */
+
+  padding: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.register-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(173, 216, 230, 0.6)
+  ); /* Light transparent blue */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 50, 0.2); /* Softer shadow for depth */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Add hover effect for interaction */
+.register-card:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.7),
+    rgba(100, 149, 237, 0.7)
+  ); /* Deep sky blue blend */
+  box-shadow: 0 12px 40px rgba(0, 0, 50, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  text-align: center;
+  color: #343a40;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #495057;
+}
+
+input,
+select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 12px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus,
+select:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 8px rgba(106, 17, 203, 0.5);
+  outline: none;
+}
+
+.text-danger {
+  font-size: 0.9rem;
+  color: #e3342f;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #1877a2, #949ca0);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  width: 100%;
+  transition: background 0.2s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #b1387c, #ff41d3);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .register-card {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
